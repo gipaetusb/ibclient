@@ -12,6 +12,12 @@
 /project/project
 /project/target
 
+# coc-metals
+.bloop/
+.metals/
+project/.bloop
+project/metals.sbt
+
 # Python
 *.pyc
 __pycache__
