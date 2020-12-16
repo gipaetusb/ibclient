@@ -9,11 +9,13 @@ import com.ib.client.Types.SecType
  * @param expiry Expiry date in format yyyymmdd identifies the futures contract
  * @param exchange for example NYMEX for commodity futures
  * @param currency in which the future is denominated
+ * @param includeExpired
  */
-class FutureContract(symbol: String, expiry: String, exchange: String = "GLOBEX", currency: String = "USD") extends Contract {
+class FutureContract(symbol: String, expiry: String, exchange: String = "GLOBEX", currency: String = "USD", includeExpired: Boolean = true) extends Contract {
   symbol(symbol)
   expiry(expiry)
   secType(SecType.FUT.name())
   exchange(exchange)
   currency(currency)
+  includeExpired(includeExpired)
 }
